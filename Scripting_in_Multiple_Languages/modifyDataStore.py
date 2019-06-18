@@ -18,10 +18,19 @@ credentials = (config['dhis']['username'], config['dhis']['password'])
 req = requests.get(url, auth=credentials)
 j = req.json()
 
+# Customize for you
+
+yourname = ''
+if not(yourname):
+	print('Please enter your name in the code')
+	sys.exit(1)
+
+key = 'Python_' + yourname
+
 # Construct a new JSON from the current JSON, adding a new key and resorting it
 
-j['Python'] = j['Angola'].copy()
-j['Python']['name3'] = 'Python'
+j[key] = j['Angola'].copy()
+j[key]['name3'] = key
 k = sorted(j.items())
 
 # Since dicts don't have an order to their indices, 

@@ -4,8 +4,11 @@
 -- assignments namespace of the DHIS 2 data store, which stores 
 -- each key as a value in the keyjsonvalue table
 
+-- Customize by putting your name in the empty string ('') in line 10, 
+-- which starts with select ''
+
 with current as (
-	select * from (
+	select '' as yourname, * from (
 		select (json_populate_record(null::datimorgunitassignments,value::JSON)).* 
 		from (
 			select value::json
@@ -22,8 +25,8 @@ with current as (
 ), index_and_data as (
 	select *, case name4 when '' then name3 else name4 end as index from current
 		union
-	select 'Sequel' as name3, name4, country, prioritization, planning, community, facility, 'Sequel' as index from current
-		where name3 = 'Namibia'
+	select yourname, 'Sequel_' || yourname as name3, name4, country, prioritization, planning, community, facility, 'Sequel_' || yourname as index from current
+		where name3 = 'Namibia' and yourname != ''
 	order by index
 
 -- remove the index from index_and_data
@@ -44,7 +47,9 @@ with current as (
 
 -- and, finally, insert the JSON from final into the keyjsonvalue table
 update keyjsonvalue
-set value = final.json
-from final
-where namespace = 'assignments' and
-	namespacekey = 'organisationUnitLevels';
+	set value = final.json
+	from final
+	join (select yourname from current limit 1) a on true
+	where namespace = 'assignments'
+		and namespacekey = 'organisationUnitLevels'
+		and yourname != '';
