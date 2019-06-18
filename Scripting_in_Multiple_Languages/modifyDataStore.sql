@@ -6,7 +6,6 @@
 
 -- Customize by putting your name in the empty string ('') in line 10, 
 -- which starts with select ''
-
 with current as (
 	select '' as yourname, * from (
 		select (json_populate_record(null::datimorgunitassignments,value::JSON)).* 
@@ -21,7 +20,6 @@ with current as (
 
 -- Add a row (for the new "country") and a column for the index to the table from above
 -- and order by the index
-
 ), index_and_data as (
 	select *, case name4 when '' then name3 else name4 end as index from current
 		union
@@ -30,14 +28,12 @@ with current as (
 	order by index
 
 -- remove the index from index_and_data
-
 ), just_data as (
 	select name3, name4, country, prioritization, planning, community, facility
 	from index_and_data
 
 -- merge the index from index_and_data and the JSONified rows from just_data into a
 -- JSON string to reinsert into the data store
-
 ), final as (
 	select json_object_agg(index_and_data.index, row_to_json(just_data)) as json
 	from index_and_data join just_data 
