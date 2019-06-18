@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# modifyDataStore.py, a python script by Ben Guaraldi
+# modifyDataStore.py, a Python script by Ben Guaraldi
 
 import sys
 import json

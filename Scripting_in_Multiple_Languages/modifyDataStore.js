@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// modifyDataStore.js, a python script by Ben Guaraldi
+// modifyDataStore.js, a Javascript script by Ben Guaraldi
 
 var fs = require('fs');
 var request = require('request');
