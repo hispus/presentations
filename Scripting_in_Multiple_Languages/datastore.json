@@ -1,0 +1,47 @@
+{
+	"Angola": {
+		"name3": "Angola",
+		"name4": "",
+		"country": 3,
+		"prioritization": 4,
+		"planning": 4,
+		"community": 5,
+		"facility": 6
+	},
+	"Bahamas": {
+		"name3": "Caribbean Region",
+		"name4": "Bahamas",
+		"country": 4,
+		"prioritization": 4,
+		"planning": 4,
+		"community": 6,
+		"facility": 7
+	},
+	"Ghana": {
+		"name3": "Ghana",
+		"name4": "",
+		"country": 3,
+		"prioritization": 5,
+		"planning": 5,
+		"community": 5,
+		"facility": 7
+	},
+	"Namibia": {
+		"name3": "Namibia",
+		"name4": "",
+		"country": 3,
+		"prioritization": 5,
+		"planning": 5,
+		"community": 5,
+		"facility": 6
+	},
+	"Zimbabwe": {
+		"name3": "Zimbabwe",
+		"name4": "",
+		"country": 3,
+		"prioritization": 5,
+		"planning": 5,
+		"community": 5,
+		"facility": 6
+	}
+}

@@ -4,6 +4,7 @@
 // Note that it's more normal to capitalize the first letter in Java classes
 // (i.e., ModifyDataStore.java), but the same format is used as the other scripts
 
+// In order to run this code, use these commands:
 // javac -classpath 'java_classes/*' modifyDataStore.java
 // java -classpath 'java_classes/*:.' modifyDataStore modifyDataStore.class
 

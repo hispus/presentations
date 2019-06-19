@@ -16,7 +16,7 @@ if (nchar(yourname) == 0) {
 
 # Get parameters from dish.json
 config <- fromJSON('dish.json')
-url<-paste0(config$dhis$baseurl, '/api/dataStore/assignments/organisationUnitLevels.json')
+url <- paste0(config$dhis$baseurl, '/api/dataStore/assignments/organisationUnitLevels.json')
 
 # Get the current JSON from the organisationUnitLevels key of the 
 # assignments namespace in the data store
