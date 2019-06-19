@@ -33,8 +33,12 @@ public class modifyDataStore {
 
 		// Get parameters from dish.json
 		JsonNode config = new ObjectMapper().readTree(new File("dish.json")).get("dhis");
-		URL url = new URL(config.get("baseurl").asText() + "/api/dataStore/assignments/organisationUnitLevels");
-		String auth = new String(new Base64().encode((config.get("username").asText() + ":" + config.get("password").asText()).getBytes()));
+		URL url = new URL(config.get("baseurl").asText() + 
+				  "/api/dataStore/assignments/organisationUnitLevels");
+		String auth = new String(new Base64().encode((
+				config.get("username").asText() + ":" + 
+				config.get("password").asText()
+			).getBytes()));
 
 		// Get the current JSON from the organisationUnitLevels key of the assignments namespace 
 		// in the data store
@@ -44,7 +48,8 @@ public class modifyDataStore {
 		connection.setRequestMethod("GET");
 
 		if(connection.getResponseCode() != 200){
-			System.err.println("Expected 200 when reading data store, instead got " + connection.getResponseCode());
+			System.err.println("Expected 200 when reading data store, instead got " + 
+				connection.getResponseCode());
 			System.exit(1);
 		}
 
@@ -77,7 +82,8 @@ public class modifyDataStore {
 
 		// Report completion and exit with status 0
 		if(connection.getResponseCode() != 200){
-			System.err.println("Expected 200 when putting to data store, instead got " + connection.getResponseCode());
+			System.err.println("Expected 200 when putting to data store, instead got " + 
+				connection.getResponseCode());
 			System.exit(1);
 		} else {
 			System.out.println("Exiting normally");

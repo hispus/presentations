@@ -18,7 +18,8 @@ if (nchar(yourname) == 0) {
 config <- fromJSON('dish.json')
 url<-paste0(config$dhis$baseurl, '/api/dataStore/assignments/organisationUnitLevels.json')
 
-# Get the current JSON from the organisationUnitLevels key of the assignments namespace in the data store
+# Get the current JSON from the organisationUnitLevels key of the 
+# assignments namespace in the data store
 json <- GET(url, authenticate(config$dhis$username, config$dhis$password)) %>%
 	content(., "text") %>%
 	fromJSON(.)
