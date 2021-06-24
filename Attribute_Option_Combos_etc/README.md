@@ -1,6 +1,6 @@
 # Attribute Option Combos, etc.
 
-A presentation create by Jim Grace.  Slides are available here on Github.
+A presentation created by Jim Grace.  Slides are available here on Github.
 
 [Here is a video of Jim Grace presenting about attribute option combos and related topics in November 2018:](https://www.youtube.com/watch?v=EcR9QwJvc7c)
 

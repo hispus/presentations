@@ -1,6 +1,6 @@
 # Approvals, etc.
 
-A presentation create by Jim Grace.  Slides are available here on Github.
+A presentation created by Jim Grace.  Slides are available here on Github.
 
 [Here is a video of Jim Grace presenting about approvals and related topics in November 2018:](https://www.youtube.com/watch?v=jBL17Pr7-TI)
 

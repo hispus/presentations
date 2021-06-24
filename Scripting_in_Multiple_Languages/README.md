@@ -1,5 +1,7 @@
 # Scripting in Multiple Languages
 
+Due to DHIS2 using jsonb in its database, it is not possible to sort objects in the data store any more, so none of this code properly sorts the objects any more.  We are leaving it here for archival purposes.
+
 In order to set up your DHIS2 installation to run the code in this repository, you must set up the DHIS2 Datastore namespace and key.
 
 *Instructions:*
